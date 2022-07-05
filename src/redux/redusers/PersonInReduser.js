@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { registration,login,logOut} from '../Acions/ActionForLogin';
+import { registration,login,logOut,CurrentAvtorization} from '../Acions/ActionForLogin';
 import { useNavigate } from "react-router-dom";
 const PersonSlice = createSlice({
   name: 'Person',
@@ -28,6 +28,10 @@ const PersonSlice = createSlice({
       state.isLoggedIn = false;
       state.token = null;
       state.user = null;
+    },
+    [CurrentAvtorization.fulfilled]: (state, { payload }) => {
+      state.user = payload;
+      state.isLoggedIn = true;
     }
     
   }

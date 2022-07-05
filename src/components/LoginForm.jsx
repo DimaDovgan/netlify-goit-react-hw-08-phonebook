@@ -33,7 +33,7 @@ export const LoginForm = () => {
         
     }
 
-    return <div><Form  onSubmit={submiteForm}>
+    return <div className="pt-5 pb-5 bg-warning bg-opacity-25 "><Form  onSubmit={submiteForm}>
         <div className="mb-3 ">
   <label className="form-label">Email address</label>
   <input  className="form-control" value={email} name="email" onChange={onHeandelChange} placeholder="name@example.com"/>

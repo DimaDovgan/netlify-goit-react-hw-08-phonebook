@@ -17,7 +17,7 @@ export const Navigate = () => {
     }
   }, [isLoging])
 
-    return <div  > <nav className="nav  justify-content-center">
+    return <div  className="container-fluid bg-primary bg-opacity-50 pb-5 "> <nav className="nav justify-content-center">
         <NavLink to={"contacts"} className="nav-link" style={({ isActive }) => ({
     color: isActive ? '#d9960f' : '#383735',
                 })} >contacts</NavLink >

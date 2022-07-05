@@ -8,8 +8,8 @@ export const UserMenu = () => {
     
     const email = useSelector(state => state.Person.user.email)
     return <div className="nav justify-content-end">
-        <h4 >Вітання {email}</h4>
-        <button type="button" onClick={()=>dispatch(logOut())} className="btn btn-outline-danger ">Logout</button>
+        <h4 className="px-2">Вітання {email}</h4>
+        <button type="button" onClick={()=>dispatch(logOut())} className="btn btn-outline-danger  ">Logout</button>
         {/* <button  type="button" onClick={()=>dispatch(logOut())} >Logout</button> */}
     </div>
 }

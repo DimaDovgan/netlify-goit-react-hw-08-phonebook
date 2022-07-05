@@ -1,6 +1,8 @@
 import { createAction ,createAsyncThunk,createSlice} from "@reduxjs/toolkit";
 import axios from "axios"
 
+import { useSelector } from "react-redux";
+
 axios.defaults.baseURL = "https://connections-api.herokuapp.com/";
 
 export const addItems = createAsyncThunk(
@@ -20,7 +22,7 @@ export const addItems = createAsyncThunk(
 export const delateContact = createAsyncThunk(
   'phone/delateContact',
  async (id) =>{
-    await axios.delete(`/contacts/${id}`).then(ff=>console.log(ff)).catch(err=>console.log(err))
+    await axios.delete(`/contacts/${id}`).then().catch(err=>console.log(err))
    const arr = await giveItems();
     return arr
   }

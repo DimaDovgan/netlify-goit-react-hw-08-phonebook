@@ -28,6 +28,19 @@ export const registration = createAsyncThunk(
         
   }
 )
+export const CurrentAvtorization = createAsyncThunk(
+  '/user/currentAvtorization',
+  async (tokenValue) => {
+    try {
+      token.set(tokenValue); 
+      const {data} = await axios.get('/users/current')
+      return data
+    }
+    catch(error) {
+      
+    }
+  }
+)
  // / users / login
  //let navigate = useNavigate();
 

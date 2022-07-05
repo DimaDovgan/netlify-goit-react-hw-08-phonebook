@@ -12,13 +12,16 @@ export const PhoneBook = () => {
 
     },[dispatch])
 
-    return <div className=" container-fluid   mr-4" >
-        
+    return <div className=" container-fluid  d-flex justify-content-around  bg-warning bg-opacity-25 pt-5 pb-5" >
+        <div className="d-block">
         <h1>Phonebook</h1>
-        <FormContacts />
-        <h2>Contacts</h2>
+            <FormContacts />
+            </div>
+        <div className="d-block ">
+        <h2 className="">Contacts</h2>
         <Filter />
-        <ContactList />
+            <ContactList />
+            </div>
     </div>
 
 }
